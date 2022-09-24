@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const date = new Date();
+let color = "red";
+---
+
+<Layout title="Main page">
+  <h1>Main page</h1>
+  <span style={{ color }}>{date.toDateString()}</span>
+  <a href="/about">To about</a>
+</Layout>

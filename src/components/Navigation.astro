@@ -1,0 +1,52 @@
+---
+const links = [
+  { url: "/", title: "Main" },
+  { url: "/about", title: "About" },
+  { url: "/products", title: "Products" },
+];
+---
+
+<nav>
+  <h2>Astro site</h2>
+  <ul>
+    {
+      links.map((item) => (
+        <li>
+          <a href={item.url}>{item.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  nav {
+    position: absolute;
+    top: 0;
+    height: 50px;
+    right: 0;
+    left: 0;
+    background: #9ca3af;
+    color: white;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+  a:hover {
+    color: black;
+  }
+</style>
